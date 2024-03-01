@@ -5,7 +5,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 body{
     font-family: "Mukta", sans-serif;
@@ -230,5 +230,11 @@ header .Menu{
     
     .contact-form {
       width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 678px){
+    .fas {
+        overflow: hidden !important;
     }
   }
