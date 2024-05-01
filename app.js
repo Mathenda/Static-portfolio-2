@@ -27,7 +27,7 @@ prev.onclick = function(){
 //auto run
 let refreshInterval = setInterval(()=>{
     next.click();
-}, 5000)
+}, 10000)
 
 function showSlider(){
     //remove item active old
