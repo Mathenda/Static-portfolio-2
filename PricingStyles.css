@@ -290,6 +290,9 @@ header{
       left: 0;
       z-index: 9;
     }
+    .dropdown{
+      margin-left: 13px;
+    }
   } 
 
   .dropdown{
@@ -297,7 +300,7 @@ header{
     justify-content: center;
     align-items: center;
     flex-wrap:wrap; */
-    margin-top: -7px;
+    /* margin-top: -7px; */
     /* min-width:15em; */
     position: relative;
     /* margin: 2em; */

@@ -355,6 +355,10 @@ header .Menu{
       left: 0;
       z-index: 9;
     }
+    .dropdown{
+      margin-left: 13px;
+    }
+    
   } 
 
   .dropdown{
@@ -362,7 +366,7 @@ header .Menu{
     justify-content: center;
     align-items: center;
     flex-wrap:wrap; */
-    margin-top: -7px;
+    /* margin-top: -1px; */
     /* min-width:15em; */
     position: relative;
     /* margin: 2em; */
@@ -401,10 +405,12 @@ header .Menu{
   .caret {
     width: 0;
     height: 0;
+    position:absolute;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 6px solid #fff;
     transition: 0.3s;
+    margin-left: 60px;
   }
 
   .caret-rotate{
@@ -435,7 +441,7 @@ header .Menu{
     margin: 0.3em 0;
     border-radius: 0.5em;
     cursor: pointer;
-
+    
   }
 
   .menu li:hover{
