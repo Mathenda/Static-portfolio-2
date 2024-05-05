@@ -4,9 +4,14 @@ let prev = document.getElementById('prev');
 let thumbnails = document.querySelectorAll('.thumbnail .item');
 
 //config param
-
 let countItem = items.length;
 let itemActive = 0;
+
+//auto run
+let refreshInterval = setInterval(()=>{
+    next.click();
+}, 10000)
+
 //event next click
 next.onclick = function(){
     itemActive = itemActive +1;
@@ -15,6 +20,7 @@ next.onclick = function(){
     }
     showSlider();
 }
+
 //event prev click
 prev.onclick = function(){
     itemActive = itemActive -1;
@@ -23,11 +29,6 @@ prev.onclick = function(){
     }
     showSlider();
 }
-
-//auto run
-let refreshInterval = setInterval(()=>{
-    next.click();
-}, 10000)
 
 function showSlider(){
     //remove item active old
@@ -43,7 +44,7 @@ function showSlider(){
     //clear auto time run slider
     clearInterval(refreshInterval);
     //auto run
-    let refreshInterval = setInterval(()=>{
+    refreshInterval = setInterval(()=>{
         next.click();
     }, 5000)
 }
@@ -52,6 +53,7 @@ function showSlider(){
 thumbnails.forEach((thumbnail,index) => {
     thumbnail.addEventListener('click', () => {
         itemActive = index;
+        clearInterval(refreshInterval); // clear the interval
         showSlider();
     })
 })
