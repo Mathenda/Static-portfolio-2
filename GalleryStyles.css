@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
 body{
     font-family: "Mukta", sans-serif;
     margin: 0;
     background-color: #010101;
     color: #eee;
+    overflow-y: auto;
 }
-
-  *{
-    margin: 0;
-    padding: 0;
-  }
 /* --------- */
 /*Scrollbar   */
 /* --------- */
@@ -34,7 +37,8 @@ body{
     background: #45474C;
     border-radius: 12px;
   }
-header{
+  
+  header{
     width: 1200px;
     max-width: 90%;
     margin: auto;
@@ -45,13 +49,14 @@ header{
     align-items: center;
     position: relative;
     z-index: 100;
+    background-color: transparent;
 }
 
 header .Logo{
     font-weight: 800;
 }
 
-header .Menu{
+/* header .Menu{
     padding: 0;
     margin: 0;
     List-style: none;
@@ -59,225 +64,36 @@ header .Menu{
     justify-content: center;
     gap: 20px;
     font-weight: 500;
+} */
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
 }
-/* slider */
-.slider{
-    height: 100vh;
-    margin-top: -50px;
-    position: relative;
+.gallery {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
 }
-
-.slider .list .item{
-    position: absolute;
-    inset: 0 0 0 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: .5s;
-}
-
-.slider .list .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-.slider .list .item::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-image: linear-gradient(
-        to top, #000 10%, transparent
-    );
-
-}
-
-.slider .list .item .content{
-    position: absolute;
-    left: 10%;
-    top: 20%;
-
-    width: 500px;
-    max-width: 80%;
-    z-index: 1;
-}
-
-.slider .list .item .content p:nth-child(1){
-    text-transform: uppercase;
-    letter-spacing: 1-px;
-}
-
-.slider .list .item .content h2{
-    font-size: 75px;
-    margin: 0;
-
-}
-
-.slider .list .item.active{
-    opacity: 1;
-    z-index: 10;
-}
-
-@keyframes show{
-    to{
-        transform: translateY(0);
-        filter: blur(0);
-        opacity: 1;
-    }
-}
-
-.slider .list .item.active p:nth-child(1),
-.slider .list .item.active h2,
-.slider .list .item.active p:nth-child(3){
-    transform: translateY(30px);
-    filter: blur(20px);
-    opacity: 0;
-    animation: show .5s .7s ease-in-out 1 forwards;
-}
-
-.slider .list .item.active h2{
-    animation-delay: 1s;
-}
-
-.slider .list .item.active p:nth-child(3){
-    animation-duration: 1.3s;
-}
-
-.arrows{
-    position: absolute;
-    top: 30%;
-    right: 50px;
-    z-index: 12;
-}
-
-.arrows button{
-    background-color: #eee5;
-    border: none;
-    font-family: monospace;
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    font-size: x-large;
-    color: #eee;
-    transition: .5s;
-}
-
-.arrows button:hover{
-    background-color: #eee;
-    color: #010101;
-}
-
-.thumbnail{
-    position: absolute;
-    bottom: 50px;
-    z-index: 11;
-    display:  flex;
-    gap: 10px;
-    width: 100%;
-    height: 250px;
-    padding: 0 50px;
-    box-sizing: border-box;
-    overflow: auto;
+.gallery > div {
+    display: flex;
     justify-content: center;
-    scroll-snap-align: x mandatory;
+    align-items: center;
 }
-
-.thumbnail::-webkit-scrollbar{
-    width: 0;
-}
-
-.thumbnail .item{
-    width: 150px;
-    height: 220px;
-    filter: brightness(.5);
-    transition: 0.5s;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-}
-
-.thumbnail .item img{
+.gallery > div > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+.gallery .tall {
+    grid-row: span 2;
 }
 
-.thumbnail .item.active{
-    filter: brightness(1.2);
-}
-
-.thumbnail .item .content{
-    position: absolute;
-    inset: auto 10px 10px 10px;
-}
-.thumbnail:hover > :not(:hover){
-    opacity: 0.4 !important;
-
-}
-
-.thumbnail.item.active > :not(.active){
-    opacity: 0.4 !important;
-
-}
-@media screen and (max-width: 678px){
-    .thumbnail{
-        justify-content: start;
-    }
-
-    .slider .list .item .content h2{
-        font-size: 60px;
-    }
-
-    .arrows{
-        top: 10%;
-    }
-}
-
-
-.container{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    /* animation: animate 16s ease-in-out infinite; */
-    z-index: 99;
-    filter:blur(60px) brightness(.8);
-}
-@keyframes animate{
-    0%, 100%{
-        background-image: url(Assets/ali-kazal-iP8Op6rCuOw-unsplash.jpg);
-    }
-    15%{
-        background-image: url(Assets/kajetan-powolny-pqlsP0C-fws-unsplash.jpg);
-    }
-    25%{
-        background-image: url(Assets/kevin-bonilla-e1ZDMAeK0Yw-unsplash.jpg);
-    }
-    26%{
-        background-image: url(Assets/mike-hindle-_slBwkVqzw4-unsplash.jpg);
-    }
-    50%{
-        background-image: url(Assets/neom-TA5hw14Coh4-unsplash.jpg);
-    }
-    60%{
-        background-image: url(Assets/pexels-pok-rie-130879.jpg);
-    }
-    75%{
-        background-image: url(Assets/reed-naliboff-k8B-YoDXPy4-unsplash.jpg);
-    }
-    85%{
-        background-image: url(Assets/ruslan-gibadullin-h9t-fMeKrlM-unsplash.jpg);
-    }
-    90%{
-        background-image: url(Assets/tobias-reich-zK9gSMQGAc4-unsplash.jpg);
-    }
-}
-  header{
+header{
     /* height: 60px; */
     /* background-color: var(--color-1); */
     filter:blur(20%);
@@ -289,11 +105,12 @@ header .Menu{
     width: 120%;
   }
   .links-container{
+    padding-left: 20px;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
   }
   header a{
     height: 100%;
@@ -356,6 +173,14 @@ header .Menu{
       z-index: 9;
     }
   } 
+
+  .title{
+    position: relative;
+    justify-content: center;
+    margin-left: 40%;
+    font-size:3dvw;
+    padding-bottom: 50px;
+  }
 
   .dropdown{
     /* display: flex;
