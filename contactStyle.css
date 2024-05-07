@@ -58,7 +58,7 @@ header{
   background-image: linear-gradient(
     to bottom, #000 10%, transparent
 );
-border-radius: 10px;
+border-bottom: 10px;
 }
 
 header .Logo{
