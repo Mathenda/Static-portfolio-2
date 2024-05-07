@@ -190,7 +190,7 @@ header{
     justify-content: center;
     align-items: center;
     flex-wrap:wrap; */
-    /* margin-top: -7px; */
+    margin-top: -7px;
     /* min-width:15em; */
     position: relative;
     /* margin: 2em; */
@@ -233,6 +233,7 @@ header{
     border-right: 5px solid transparent;
     border-top: 6px solid #fff;
     transition: 0.3s;
+    margin-left: 60px;
   }
 
   .caret-rotate{
