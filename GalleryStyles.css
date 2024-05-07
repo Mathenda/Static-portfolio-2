@@ -91,9 +91,11 @@ img {
 }
 .gallery .tall {
     grid-row: span 2;
+
 }
 .image-container.special:hover {
-  grid-row: span 2;
+  grid-row: span 3;
+  grid-column: span 2;
 }
 
 header{
