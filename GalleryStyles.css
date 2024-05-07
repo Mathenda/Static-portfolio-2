@@ -92,6 +92,9 @@ img {
 .gallery .tall {
     grid-row: span 2;
 }
+.image-container.special:hover {
+  grid-row: span 2;
+}
 
 header{
     /* height: 60px; */
