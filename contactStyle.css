@@ -368,7 +368,10 @@ header .Menu{
     flex-wrap:wrap; */
     /* margin-top: -7px; */
     /* min-width:15em; */
+    margin-top: 5px;
+    min-width:15em;
     position: relative;
+    width: 100px;
     /* margin: 2em; */
   }
 
@@ -388,7 +391,7 @@ header .Menu{
     padding: 1em;
     cursor: pointer;
     transition: border 1.0s;    
-    width: 150px;
+    width: 250px;
     height: 40px;
   }
 
@@ -418,7 +421,7 @@ header .Menu{
   .menu{
     list-style: none;
     padding: 0.2em 0.5em;
-    background: #323741;
+    background: rgba(0,0,0, 0.8);
     border: 1px #363a43 solid;
     box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
     border-radius: 0.5em;
@@ -438,10 +441,19 @@ header .Menu{
     padding: 0.7em 0.5em;
     margin: 0.3em 0;
     border-radius: 0.5em;
+    position: relative;
+    left: 10px;
     cursor: pointer;
+    height: 60px;
+    width: 200px;
 
   }
-
+  .menu li a{
+    position: relative;
+    justify-content: center;
+    align-items:center;
+    top: -15px;
+  }
   .menu li:hover{
     background: #2a2d35;
   }
