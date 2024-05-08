@@ -10,7 +10,7 @@
 body{
     font-family: "Mukta", sans-serif;
     margin: 0;
-    background-color: #010101;
+    background-color: #161616;
     color: #eee;
     overflow-y: auto;
 }
@@ -81,7 +81,7 @@ header .Menu{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(Assets/neom-TA5hw14Coh4-unsplash.jpg);
+    /* background-image: url(Assets/neom-TA5hw14Coh4-unsplash.jpg); */
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -96,7 +96,7 @@ header .Menu{
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: #;
   }
   
   section {
@@ -177,7 +177,7 @@ header .Menu{
   }
   
   .contact-form {
-    background-color: #fff;
+    background-color: transparent;
     padding: 40px;
     width: 45%;
     padding-bottom: 20px;
@@ -188,13 +188,15 @@ header .Menu{
     font-weight: bold;
     font-size: 2em;
     margin-bottom: 10px;
-    color: #333;
+    color: white;
   }
   
   .contact-form .input-box {
     position: relative;
     width: 100%;
     margin-top: 10px;
+    padding-top: 20px;
+    /* background-color: #333; */
   }
   
   .contact-form .input-box input,
@@ -203,13 +205,17 @@ header .Menu{
     padding: 5px 0;
     font-size: 16px;
     margin: 10px 0;
+    color: white;
+    background-color: transparent;
+    height: 50px;
     border: none;
-    border-bottom: 2px solid #333;
+    border: 2px solid rgb(85, 85, 85);
     outline: none;
     resize: none;
   }
   
   .contact-form .input-box span {
+    top: -10px;
     position: absolute;
     left: 0;
     padding: 5px 0;
@@ -217,14 +223,14 @@ header .Menu{
     margin: 10px 0;
     pointer-events: none;
     transition: 0.5s;
-    color: #666;
+    color: white;
   }
   
   .contact-form .input-box input:focus ~ span,
   .contact-form .input-box textarea:focus ~ span{
-    color: #0fbcf9;
+    color: rgb(119, 112, 112);
     font-size: 12px;
-    transform: translateY(-20px);
+    transform: translateY(-5px);
   }
   
   .contact-form .input-box input[type="submit"]
