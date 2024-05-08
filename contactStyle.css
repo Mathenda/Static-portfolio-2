@@ -181,7 +181,8 @@ header .Menu{
     padding: 40px;
     width: 45%;
     padding-bottom: 20px;
-    padding-top: 20px;
+    margin-top: -60px;
+    /* padding-top: 20px; */
   }
   
   .contact-form h2 {
@@ -238,6 +239,7 @@ header .Menu{
     width: 100%;
     background: #00bcd4;
     color: #FFF;
+    margin-top: -20px;
     border: none;
     cursor: pointer;
     padding: 10px;
@@ -248,7 +250,7 @@ header .Menu{
   
   .contact-form .input-box input[type="submit"]:hover
   {
-    background: #FFF;
+    background: #333;
     color: #00bcd4;
   }
   
@@ -369,7 +371,7 @@ header .Menu{
     justify-content: center;
     align-items: center;
     flex-wrap:wrap; */
-    /* margin-top: -7px; */
+    /* margin-top: -20px; */
     /* min-width:15em; */
     margin-top: 5px;
     min-width:15em;
