@@ -109,6 +109,11 @@ img {
   grid-column: span 2;
 }
 
+.image-container.cover {
+  grid-row: span 3;
+  grid-column: span 2;
+}
+
 header{
     /* height: 60px; */
     /* background-color: var(--color-1); */
