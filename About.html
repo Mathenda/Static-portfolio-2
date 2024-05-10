@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html Lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okysxoop</title>
+    <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="contactStyle.css">
+</head>
+
+<body>
+  <script>
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const tier = urlParams.get('tier');
+        if (tier) {
+            const messageBox = document.querySelector('.input-box.Message textarea');
+            messageBox.value = "Hi! i would like to inquire about a " + tier;
+        }
+    }
+</script>
+  <header>
+    <input type="checkbox" id="sidebar-active">
+    <label for="sidebar-active" class="open-sidebar-button">
+      <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"fill="white"/></svg>
+    </label>
+    <label id="overlay" for="sidebar-active"></label>
+    <div class="links-container">
+      <label for="sidebar-active" class="close-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"fill="white"/></svg>
+      </label>
+
+      <a class="home-link" href="About.html">Okysxoop</a> 
+      <a href="index.html">Home</a> 
+      <!-- <a href="Gallery.html">Gallery</a> -->
+      <div class="dropdown gal">
+        <div class="select">
+            <span class="selected">Portfolio</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active"><a href="Gallery.html">Portfolio</a></li>
+            <li><a href="Event-1.html">Creatives</a></li>
+            <li><a href="Event-2.html">Events</a></li>
+            <li><a href="Event-3.html">Loyal to the plug</a></li>
+            <li><a href="Event-4.html">Punyete Sontaga</a></li>
+        </ul>
+      </div>
+      <a href="Contact.html">Contact Me</a>
+
+      
+    </div>
+  </header>
+    <div class="NewBody">
+        
+        <section>
+            <div class="section-header">
+              <div class="container">
+                <h2>About Okysxoop</h2>
+                <p>My name is Casim "Okysxoop" I take this moment to share my journey and world of seeing life from a different perspective.<br/> The imaginary Life of Okysxoop which best describes myself as capturing the good moments of life.<br/> Hope you enjoy this body of work that I call HE ART is where the heart is  </p>
+              </div>
+            </div>
+          </section>
+    </div>
+    <script src="Galleryapp.js"></script>
+</body>
+</html>
